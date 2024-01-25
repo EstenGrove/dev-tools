@@ -1,0 +1,19 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.ToolsPage {
+	@include fill_container;
+
+	&_title {
+		font-size: calc(3vw + 3vh);
+		color: #ffffff;
+	}
+	&_content {
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+		@include flex_row(flex-start, flex-start, wrap);
+		// gap: 1rem 1rem;
+	}
+}

@@ -1,0 +1,57 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.ColorPicker {
+	width: 5rem;
+	height: 5rem;
+	min-width: 5rem;
+	min-height: 5rem;
+	max-width: 5rem;
+	max-height: 5rem;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_input {
+		position: relative;
+		width: 5rem;
+		max-width: 5rem;
+		max-height: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		-webkit-appearance: none;
+		z-index: 2;
+		&:hover {
+			cursor: pointer;
+		}
+		&::-webkit-color-swatch-wrapper {
+			border-radius: 50%;
+			border: none;
+			outline: none;
+		}
+		&::-webkit-color-swatch {
+			border-radius: 50%;
+			border: none;
+			outline: none;
+		}
+	}
+	&_icon {
+		position: absolute;
+		top: 1.2rem;
+		left: 1.2rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		fill: #ffffff;
+		z-index: 2;
+	}
+}

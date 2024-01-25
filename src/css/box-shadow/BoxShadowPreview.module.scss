@@ -1,0 +1,44 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.BoxShadowPreview {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 40rem;
+	height: 100%;
+
+	&_inner {
+		@include fill_container;
+	}
+}
+
+.BoxShadowCanvas {
+	width: 100%;
+	height: 100%;
+
+	&_inner {
+		width: 100%;
+		height: 100%;
+		// background-color: #eaecef;
+		@include flex_col(center, center);
+	}
+}
+
+.BoxShadowModel {
+	width: 30rem;
+	height: 30rem;
+	max-width: 50rem;
+	max-height: 50rem;
+	background-color: #ffffff;
+	border-radius: 0.5rem;
+
+	&_inner {
+		@include fill_container;
+		@include flex_row(center, center);
+		padding: 4% 4%;
+		word-wrap: break-word;
+		// text-overflow: clip;
+	}
+}

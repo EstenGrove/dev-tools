@@ -1,0 +1,28 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.ColorCodeCycler {
+	width: auto;
+
+	&_iconWrapper {
+		width: 2.8rem;
+		height: 2.8rem;
+		border-radius: 50%;
+		@include flex_row(center, center, nowrap);
+		&:hover {
+			cursor: pointer;
+			background-color: rgba(173, 215, 246, 0.3);
+		}
+		&:hover &_icon {
+			fill: map-get($map: $greyTints, $key: "50");
+			cursor: pointer;
+		}
+
+		&_icon {
+			width: 2.5rem;
+			height: 2.5rem;
+			fill: map-get($map: $greyTints, $key: "200");
+		}
+	}
+}

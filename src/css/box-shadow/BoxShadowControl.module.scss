@@ -1,0 +1,69 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.BoxShadowControl {
+	width: 100%;
+	height: 10rem;
+	// border: 1px solid red;
+
+	&_top {
+		width: 100%;
+		height: auto;
+		@include flex_row(space-between, flex-start, nowrap);
+		margin-bottom: 1rem;
+
+		&_label {
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+		&_input {
+			width: 4.5rem;
+			height: 2.5rem;
+			padding-left: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 0.5rem;
+			text-align: right;
+		}
+	}
+	&_bottom {
+		width: 100%;
+
+		&_input {
+			width: 100%;
+			-webkit-appearance: none;
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				border-radius: 50%;
+				width: 1.5rem;
+				height: 1.5rem;
+				// background-color: #0d0d0d;
+				background-color: $accent;
+				margin-top: -0.5rem;
+				box-shadow: map-get($map: $shadows, $key: "medium");
+			}
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				height: 0.7rem;
+				cursor: pointer;
+				background: map-get($map: $greyTints, $key: "100");
+				border-radius: 5rem;
+				border: 0.2px solid map-get($map: $greyTints, $key: "100");
+			}
+			::-moz-range-thumb {
+				box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+				cursor: pointer;
+			}
+			&::-ms-track {
+				width: 100%;
+				cursor: pointer;
+
+				/* Hides the slider so custom styles can be added */
+				background: transparent;
+				border-color: transparent;
+				color: transparent;
+			}
+		}
+	}
+}

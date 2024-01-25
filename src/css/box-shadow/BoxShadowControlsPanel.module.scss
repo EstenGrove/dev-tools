@@ -1,0 +1,19 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.BoxShadowControlsPanel {
+	@include fill_container;
+	padding-top: 1rem;
+
+	&_top {
+		width: 100%;
+		height: 5rem;
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+
+	&_inner {
+		@include fill_container;
+	}
+}
