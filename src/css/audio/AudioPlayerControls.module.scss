@@ -1,0 +1,141 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.AudioPlayerControls {
+	width: 100%;
+	height: 15rem;
+	padding: 2rem 2rem;
+
+	&_inner {
+		width: 100%;
+		height: 80%;
+		@include flex_row(space-evenly, center, nowrap);
+	}
+	&_bottom {
+		width: 100%;
+		height: 20%;
+		@include flex_row(space-evenly, baseline, nowrap);
+
+		& > :first-child {
+			margin-right: auto;
+			margin-left: 2rem;
+		}
+		& > :last-child {
+			margin-left: auto;
+			margin-right: 2rem;
+		}
+	}
+}
+
+.PrimaryButton {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background-color: map-get($map: $blueGreyMap, $key: "50");
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+		box-shadow: map-get($map: $shadows, $key: "subtle");
+	}
+
+	&_icon {
+		width: 3rem;
+		height: 3rem;
+		fill: #000;
+	}
+}
+.SecondaryButton {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: transparent;
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_icon {
+		width: 3rem;
+		height: 3rem;
+		fill: map-get($map: $blueGreyMap, $key: "50");
+	}
+}
+.AncillaryButton {
+	width: 3.7rem;
+	height: 3.7rem;
+	border-radius: 50%;
+	background-color: transparent;
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_icon {
+		width: 2.7rem;
+		height: 2.7rem;
+		fill: map-get($map: $blueGreyMap, $key: "50");
+	}
+}
+
+.PlayButton {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background-color: map-get($map: $blueGreyMap, $key: "50");
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+		box-shadow: map-get($map: $shadows, $key: "subtle");
+	}
+
+	&_icon {
+		width: 4.5rem;
+		height: 4.5rem;
+		fill: #000;
+	}
+}
+.PauseButton {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background-color: map-get($map: $blueGreyMap, $key: "50");
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_icon {
+		width: 4.5rem;
+		height: 4.5rem;
+		fill: #000;
+	}
+}
+.HeartButton {
+	width: 3.7rem;
+	height: 3.7rem;
+	border-radius: 50%;
+	background-color: transparent;
+	@include flex_row(center, center, nowrap);
+	border: none;
+	outline: none;
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_icon {
+		width: 2.7rem;
+		height: 2.7rem;
+		fill: map-get($map: $blueGreyMap, $key: "50");
+	}
+}

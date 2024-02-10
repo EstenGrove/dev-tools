@@ -47,3 +47,10 @@ $defaultColor: rgba(0, 0, 0, 0.49);
 		color: $accent;
 	}
 }
+
+@mixin gradient2Color($startColor, $endColor) {
+	background: linear-gradient($startColor, $endColor);
+}
+@mixin gradient3Color($startColor, $midColor, $endColor) {
+	background: linear-gradient($startColor, $midColor, $endColor);
+}

@@ -9,4 +9,18 @@
 		font-size: calc(3vw + 3vh);
 		color: #ffffff;
 	}
+
+	&_inner {
+		@include fill_container;
+		@include flex_row(center, center, nowrap);
+		padding: 2rem 0;
+	}
+	&_inner2 {
+		width: 100%;
+		height: auto;
+		min-height: 50rem;
+		@include flex_row(center, center, nowrap);
+		padding: 2rem 0;
+		background-color: #fff;
+	}
 }

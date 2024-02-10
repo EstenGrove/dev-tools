@@ -1,0 +1,70 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.AudioPlayerArtwork {
+	width: 100%;
+	height: 40rem;
+	padding: 2rem 2rem;
+	@include flex_col(flex-start, center, nowrap);
+	border-radius: 1rem 1rem;
+
+	&_albumArt {
+		width: 100%;
+		height: calc(32rem - 2rem);
+	}
+	&_albumDetails {
+		width: 100%;
+		height: calc(8rem - 2rem);
+		padding: 1rem 0;
+	}
+}
+
+// TOP SECTION
+.AudioArtwork {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	border-radius: 1rem 1rem;
+}
+// BOTTOM SECTION
+.AudioDetails {
+	width: 100%;
+	height: 8rem;
+	text-align: left;
+
+	&_artist {
+		font-size: 1.8rem;
+		color: map-get($map: $blueGreyMap, $key: "300");
+	}
+	&_title {
+		font-size: 3rem;
+		font-weight: 800;
+		overflow-x: auto;
+		color: #ffffff;
+	}
+}
+
+.TrackArt {
+	width: auto;
+	height: auto;
+	border-radius: 1rem 1rem;
+	@include flex_col(center, center);
+
+	&_img {
+		@include fill_container;
+		max-height: calc(32rem - 2rem);
+		object-fit: fill;
+		border-radius: 1rem 1rem;
+	}
+}
+
+.Fallback {
+	width: 100%;
+	height: 100%;
+	min-width: 20rem;
+	min-height: 20rem;
+	// fill: map-get($map: $blueGreyMap, $key: "800");
+	fill: map-get($map: $blueGreyMap, $key: "200");
+}

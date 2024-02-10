@@ -1,0 +1,14 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.MobileBoxShadowControlsBar {
+	width: 100%;
+	height: 6rem;
+
+	&_inner {
+		@include fill_container;
+		padding: 1rem 2rem;
+		@include flex_row(space-evenly, center, wrap);
+	}
+}

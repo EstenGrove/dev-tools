@@ -1,0 +1,69 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+$start: map-get(
+	$map: $redMap,
+	$key: "600",
+);
+$mid: map-get(
+	$map: $purpleMap,
+	$key: "500",
+);
+$end: map-get(
+	$map: $purpleMap,
+	$key: "600",
+);
+
+$one: map-get(
+	$map: $blueGreyMap,
+	$key: "200",
+);
+$two: map-get(
+	$map: $blueGreyMap,
+	$key: "100",
+);
+
+@mixin bgGradient() {
+	background-image: linear-gradient(
+		to right top,
+		#051937,
+		#002866,
+		#173495,
+		#463bc3,
+		#7c3aed
+	);
+}
+@mixin bgGradient2() {
+	background: linear-gradient(
+		45deg,
+		hsla(262, 83%, 58%, 1) 0%,
+		hsla(56, 83%, 82%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		45deg,
+		hsla(262, 83%, 58%, 1) 0%,
+		hsla(56, 83%, 82%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		45deg,
+		hsla(262, 83%, 58%, 1) 0%,
+		hsla(56, 83%, 82%, 1) 100%
+	);
+}
+
+.AudioPlayer {
+	width: 100%;
+	height: 60rem;
+	max-width: 40rem;
+	border-radius: 1rem;
+	// border: 1px solid #ccc;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	// @include bgGradient2();
+	@include gradient2Color($start, $end);
+}
